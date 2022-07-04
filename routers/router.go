@@ -6,5 +6,7 @@ import (
 )
 
 func init() {
-    beego.Router("/cms",&cms.LoginController{})
+    beego.Router("/cms/login",&cms.LoginController{},"get:Login")
+    beego.Router("/cms/loginpost",&cms.LoginController{},"post:LoginPost")
+    beego.Router("/cms/main/index",&cms.MainController{},"get:Index")
 }
